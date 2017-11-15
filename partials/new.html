@@ -1,5 +1,35 @@
 <div class="text-center" id="rated">
-	<h1>New Contacts</h1>
+	<h1>New Contacts Form</h1>
 	{{controller}}
 
-</div>
+	<form>
+	  <div class="row">
+	    <div class="col-md-6 mb-3">
+	      <input type="text" class="form-control new-contact" id="firstname" placeholder="First name">
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <input type="text" class="form-control new-contact" id="lastname" placeholder="Last name">
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="col-md-6 mb-3">
+	      <input type="tel" class="form-control new-contact" id="homephone" placeholder="home phone: xxx-xxx-xxxx" required>
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <input type="tel" class="form-control new-contact" id="workphone" placeholder="work phone: xxx-xxx-xxxx" required>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="col-md-6 mb-3">
+	      <input type="email" class="form-control new-contact" id="homeemail" placeholder="homeEmail@home.com">
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <input type="email" class="form-control new-contact" id="workemail" placeholder="workEmail@work.com">
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="col-md-12">
+	      <textarea class="form-control new-contact" id="notes" placeholder="contact notes"></textarea>
+	    </div>
+	  </div>
+	</form>
