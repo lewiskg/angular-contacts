@@ -1,5 +1,5 @@
 {
-	"contact0": {	"id": 0,		
+	"contact0": {			
 					"firstName": "Sheldon",
 					"lastName": "Cooper",
 					"phoneHome": "555-555-5555",
@@ -10,7 +10,7 @@
 					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
 				},
 
-	"contact1": {	"id": 1,	
+	"contact1": {	
 					"firstName": "Bernadette",
 					"lastName": "Rostenkowski",
 					"phoneHome": "555-555-5557",
@@ -20,7 +20,7 @@
 					"notes":	"Why did she marry Howard?!?!",
 					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
 				},
-	"contact2": {	"id": 2,	
+	"contact2": {		
 					"firstName": "Leonard",
 					"lastName": "Hofstadter",
 					"phoneHome": "555-555-5559",
@@ -29,7 +29,7 @@
 					"notes":	"Even a blind squirrel finds a nut.",
 					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
 				},
-	"contact3": {	"id": 3,	
+	"contact3": {		
 					"firstName": "Penny",
 					"lastName": "Hofstadter",
 					"phoneHome": "555-555-5545",
@@ -39,7 +39,7 @@
 					"notes":	"Leondard is better than nothing.",
 					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
 				},
-	"contact4": {	"id": 4,	
+	"contact4": {		
 					"firstName": "Amy",
 					"lastName": "Fowler",
 					"phoneHome": "555-555-2345",
@@ -49,7 +49,7 @@
 					"notes":	"She's freaky!!!!!.",
 					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
 				},
-	"contact5": {	"id": 5,	
+	"contact5": {		
 					"firstName": "Raj",
 					"lastName": "Koothrappali",
 					"phoneHome": "555-545-2345",
@@ -59,7 +59,7 @@
 					"notes":	"Lonely man looking for a lonely girl.",
 					"uid": "12345678"
 				},
-	"contact6": {	"id": 6,	
+	"contact6": {	
 					"firstName": "Howard",
 					"lastName": "Wolowitz",
 					"phoneHome": "555-465-2315",
@@ -69,7 +69,7 @@
 					"notes":	"I swear, if he tells me one more time he's been to space, I'm going to put him there!",
 					"uid": "12345678"
 				},
-	"contact7": {	"id": 7,	
+	"contact7": {		
 					"firstName": "Barry",
 					"lastName": "Kripke",
 					"phoneHome": "555-565-2775",
@@ -79,7 +79,7 @@
 					"notes":	"Hates Sheldon.  Can't imagine why?",
 					"uid": "12345678"
 				},
-	"contact8": {	"id": 8,	
+	"contact8": {		
 					"firstName": "Stuart",
 					"lastName": "Bloom",
 					"phoneHome": "555-775-2695",
@@ -89,7 +89,7 @@
 					"notes":	"Pathetic.",
 					"uid": "12345678"
 				},
-	"contact9": {	"id": 9,	
+	"contact9": {		
 					"firstName": "Leslie",
 					"lastName": "Winkle",
 					"phoneHome": "555-544-2095",
