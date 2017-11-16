@@ -1,93 +1,102 @@
 {
-	"contacts": [
-		{
-			"firstName": "Sheldon",
-			"lastName": "Cooper",
-			"phoneHome": "555-555-5555",
-			"phoneWork": "555-555-5556",
-			"emailHome": "sheldon.cooper@gmail.com",
-			"emailWork": "sheldon.cooper@caltec.edu",
-			"notes":	"He's a dork!"
-		},
-		{
-			"firstName": "Bernadette",
-			"lastName": "Rostenkowski",
-			"phoneHome": "555-555-5557",
-			"phoneWork": "555-555-5558",
-			"emailHome": "bernadette.rostenkowski@gmail.com",
-			"emailWork": "brostenkowski@drugsRus.com",
-			"notes":	"Why did she marry Howard?!?!"
-		},
-		{
-			"firstName": "Leonard",
-			"lastName": "Hofstadter",
-			"phoneHome": "555-555-5559",
-			"phoneWork": "555-555-5590",
-			"emailHome": "leonard.hofstadter@caltec.edu",
-			"notes":	"Even a blind squirrel finds a nut."
-		},
-		{
-			"firstName": "Penny",
-			"lastName": "Hofstadter",
-			"phoneHome": "555-555-5545",
-			"phoneWork": "555-555-3450",
-			"emailHome": "penny.hofstadter@gmail.com",
-			"emailWork": "penny.hofstadter@cheescakefactory.com",
-			"notes":	"Leondard is better than nothing."
-		},
-		{
-			"firstName": "Amy",
-			"lastName": "Fowler",
-			"phoneHome": "555-555-2345",
-			"phoneWork": "555-555-2250",
-			"emailHome": "amy.f.fowler@gmail.com",
-			"emailWork": "amy.f.fowler@caltec.edu",
-			"notes":	"She's freaky!!!!!."
-		},
-		{
-			"firstName": "Raj",
-			"lastName": "Koothrappali",
-			"phoneHome": "555-545-2345",
-			"phoneWork": "555-522-1250",
-			"emailHome": "rkooth@gmail.com",
-			"emailWork": "raj.koothrappali@caltec.edu",
-			"notes":	"Lonely man looking for a lonely girl."
-		},
-		{
-			"firstName": "Howard",
-			"lastName": "Wolowitz",
-			"phoneHome": "555-465-2315",
-			"phoneWork": "555-562-1350",
-			"emailHome": "rocketman@gmail.com",
-			"emailWork": "howard.wolowitz@caltec.edu",
-			"notes":	"I swear, if he tells me one more time he's been to space, I'm going to put him there!"
-		},
-		{
-			"firstName": "Barry",
-			"lastName": "Kripke",
-			"phoneHome": "555-565-2775",
-			"phoneWork": "555-556-1255",
-			"emailHome": "bkripke@gmail.com",
-			"emailWork": "barry.kripke@caltec.edu",
-			"notes":	"Hates Sheldon.  Can't imagine why?"
-		},
-		{
-			"firstName": "Stuart",
-			"lastName": "Bloom",
-			"phoneHome": "555-775-2695",
-			"phoneWork": "555-675-4455",
-			"emailHome": "comicman@gmail.com",
-			"emailWork": "comicman@comiccenterpasadena.com",
-			"notes":	"Pathetic."
-		},
-		{
-			"firstName": "Leslie",
-			"lastName": "Winkle",
-			"phoneHome": "555-544-2095",
-			"phoneWork": "555-577-1223",
-			"emailHome": "leslie.winkle@gmail.com",
-			"emailWork": "leslie.winkle@caltec.edu",
-			"notes":	"Eats in the lab.  Gross!"
-		}
-	]
+	"contact0": {	"id": 0,		
+					"firstName": "Sheldon",
+					"lastName": "Cooper",
+					"phoneHome": "555-555-5555",
+					"phoneWork": "555-555-5556",
+					"emailHome": "sheldon.cooper@gmail.com",
+					"emailWork": "sheldon.cooper@caltec.edu",
+					"notes":	"He's a dork!",
+					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
+				},
+
+	"contact1": {	"id": 1,	
+					"firstName": "Bernadette",
+					"lastName": "Rostenkowski",
+					"phoneHome": "555-555-5557",
+					"phoneWork": "555-555-5558",
+					"emailHome": "bernadette.rostenkowski@gmail.com",
+					"emailWork": "brostenkowski@drugsRus.com",
+					"notes":	"Why did she marry Howard?!?!",
+					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
+				},
+	"contact2": {	"id": 2,	
+					"firstName": "Leonard",
+					"lastName": "Hofstadter",
+					"phoneHome": "555-555-5559",
+					"phoneWork": "555-555-5590",
+					"emailHome": "leonard.hofstadter@caltec.edu",
+					"notes":	"Even a blind squirrel finds a nut.",
+					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
+				},
+	"contact3": {	"id": 3,	
+					"firstName": "Penny",
+					"lastName": "Hofstadter",
+					"phoneHome": "555-555-5545",
+					"phoneWork": "555-555-3450",
+					"emailHome": "penny.hofstadter@gmail.com",
+					"emailWork": "penny.hofstadter@cheescakefactory.com",
+					"notes":	"Leondard is better than nothing.",
+					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
+				},
+	"contact4": {	"id": 4,	
+					"firstName": "Amy",
+					"lastName": "Fowler",
+					"phoneHome": "555-555-2345",
+					"phoneWork": "555-555-2250",
+					"emailHome": "amy.f.fowler@gmail.com",
+					"emailWork": "amy.f.fowler@caltec.edu",
+					"notes":	"She's freaky!!!!!.",
+					"uid": "Wjpi45FakkThV2JHN2SzauwXqDg1"
+				},
+	"contact5": {	"id": 5,	
+					"firstName": "Raj",
+					"lastName": "Koothrappali",
+					"phoneHome": "555-545-2345",
+					"phoneWork": "555-522-1250",
+					"emailHome": "rkooth@gmail.com",
+					"emailWork": "raj.koothrappali@caltec.edu",
+					"notes":	"Lonely man looking for a lonely girl.",
+					"uid": "12345678"
+				},
+	"contact6": {	"id": 6,	
+					"firstName": "Howard",
+					"lastName": "Wolowitz",
+					"phoneHome": "555-465-2315",
+					"phoneWork": "555-562-1350",
+					"emailHome": "rocketman@gmail.com",
+					"emailWork": "howard.wolowitz@caltec.edu",
+					"notes":	"I swear, if he tells me one more time he's been to space, I'm going to put him there!",
+					"uid": "12345678"
+				},
+	"contact7": {	"id": 7,	
+					"firstName": "Barry",
+					"lastName": "Kripke",
+					"phoneHome": "555-565-2775",
+					"phoneWork": "555-556-1255",
+					"emailHome": "bkripke@gmail.com",
+					"emailWork": "barry.kripke@caltec.edu",
+					"notes":	"Hates Sheldon.  Can't imagine why?",
+					"uid": "12345678"
+				},
+	"contact8": {	"id": 8,	
+					"firstName": "Stuart",
+					"lastName": "Bloom",
+					"phoneHome": "555-775-2695",
+					"phoneWork": "555-675-4455",
+					"emailHome": "comicman@gmail.com",
+					"emailWork": "comicman@comiccenterpasadena.com",
+					"notes":	"Pathetic.",
+					"uid": "12345678"
+				},
+	"contact9": {	"id": 9,	
+					"firstName": "Leslie",
+					"lastName": "Winkle",
+					"phoneHome": "555-544-2095",
+					"phoneWork": "555-577-1223",
+					"emailHome": "leslie.winkle@gmail.com",
+					"emailWork": "leslie.winkle@caltec.edu",
+					"notes":	"Eats in the lab.  Gross!",
+					"uid": "12345678"
+				}
 }
