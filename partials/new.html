@@ -5,10 +5,10 @@
 	<form>
 	  <div class="row">
 	    <div class="col-md-6 mb-3">
-	      <input type="text" class="form-control new-contact" id="firstname" placeholder="First name">
+	      <input type="text" class="form-control new-contact" id="firstname" placeholder="First name" required>
 	    </div>
 	    <div class="col-md-6 mb-3">
-	      <input type="text" class="form-control new-contact" id="lastname" placeholder="Last name">
+	      <input type="text" class="form-control new-contact" id="lastname" placeholder="Last name" required>
 	    </div>
 	  </div>
 	  <div class="row">
@@ -21,10 +21,10 @@
 	  </div>
 	  <div class="row">
 	    <div class="col-md-6 mb-3">
-	      <input type="email" class="form-control new-contact" id="homeemail" placeholder="homeEmail@home.com">
+	      <input type="email" class="form-control new-contact" id="homeemail" placeholder="homeEmail@home.com" required>
 	    </div>
 	    <div class="col-md-6 mb-3">
-	      <input type="email" class="form-control new-contact" id="workemail" placeholder="workEmail@work.com">
+	      <input type="email" class="form-control new-contact" id="workemail" placeholder="workEmail@work.com" required>
 	    </div>
 	  </div>
 	  <div class="row">
@@ -37,7 +37,7 @@
 	      <button class="btn btn-default" id="addContact">Add Contact</Button>
 	    </div>
 	    <div class="col-md-6 mb-3">
-	      <button class="btn btn-default" id="clearConcact">Clear Form</Button>
+	      <button class="btn btn-danger" type="reset" id="clearConcact" ng-click="clearForm()">Clear Form</Button>
 	    </div>
 	  </div>
 	</form>

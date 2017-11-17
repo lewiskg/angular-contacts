@@ -30,7 +30,6 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthService){
       		// currRoute.originalPath ='/search' 0 != -1 appTo= true
       		appTo = currRoute.originalPath.indexOf('/login') !== -1;
       	}  
-console.log("logged, appTo", logged, appTo);
     	//if not on /login page AND not logged in redirect to /login
     	if (!appTo && !logged) {
       		event.preventDefault();
@@ -47,15 +46,18 @@ app.config(function($routeProvider){
 		})
 		.when("/contacts/view", {
 			templateUrl: 'partials/view.html',  
-			controller: 'ViewCtrl' 
+			controller: 'ViewCtrl',
+			resolve:  {isAuth} // part of ngRouter
 		})
 		.when("/contacts/new", {
 			templateUrl: 'partials/new.html',  
-			controller: 'NewCtrl' 
+			controller: 'NewCtrl',
+			resolve:  {isAuth} // part of ngRouter
 		})
 		.when("/contacts/favorites", {
 			templateUrl: 'partials/favorites.html',  
-			controller: 'FavoritesCtrl' 
+			controller: 'FavoritesCtrl',
+			resolve:  {isAuth} // part of ngRouter
 		})
 		.otherwise("/login"); 
 
