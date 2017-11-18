@@ -2,41 +2,47 @@
 	<h1>New Contacts Form</h1>
 	{{controller}}
 
-	<form>
+	<form name="new-contact-form" novalidate ng-controller="checkForm">
 	  <div class="row">
-	    <div class="col-md-6 mb-3">
-	      <input type="text" class="form-control new-contact" id="firstname" placeholder="First name" required>
+	    <div class="col-md-4 col-md-offset-4 mb-3">
+	      <input type="text" class="form-control new-contact" name="firstname" ng-model="firstname" placeholder="First name" required>
 	    </div>
-	    <div class="col-md-6 mb-3">
-	      <input type="text" class="form-control new-contact" id="lastname" placeholder="Last name" required>
+	</div>
+	  <div class="row">
+	    <div class="col-md-4 col-md-offset-4 mb-3">
+	      <input type="text" class="form-control new-contact" name="lastname" ng-model="lastname" placeholder="Last name" required>
 	    </div>
 	  </div>
 	  <div class="row">
-	    <div class="col-md-6 mb-3">
-	      <input type="tel" class="form-control new-contact" id="homephone" placeholder="home phone: xxx-xxx-xxxx" required>
+	    <div class="col-md-4 col-md-offset-4 mb-3">
+	      <input type="tel" class="form-control new-contact" name="homephone" ng-model="homephone" placeholder="home phone: xxx-xxx-xxxx" required>
 	    </div>
-	    <div class="col-md-6 mb-3">
-	      <input type="tel" class="form-control new-contact" id="workphone" placeholder="work phone: xxx-xxx-xxxx" required>
+	</div>
+	  <div class="row">
+	    <div class="col-md-4 col-md-offset-4 mb-3">
+	      <input type="tel" class="form-control new-contact" name="workphone" ng-model="workphone" placeholder="work phone: xxx-xxx-xxxx" required>
 	    </div>
 	  </div>
 	  <div class="row">
-	    <div class="col-md-6 mb-3">
-	      <input type="email" class="form-control new-contact" id="homeemail" placeholder="homeEmail@home.com" required>
+	    <div class="col-md-4 col-md-offset-4 mb-3">
+	      <input type="email" class="form-control new-contact" name="homeemail" ng-model="homeemail" placeholder="homeEmail@home.com" required>
 	    </div>
-	    <div class="col-md-6 mb-3">
-	      <input type="email" class="form-control new-contact" id="workemail" placeholder="workEmail@work.com" required>
+	</div>
+	  <div class="row">
+	    <div class="col-md-4 col-md-offset-4 mb-3">
+	      <input type="email" class="form-control new-contact" name="workemail" ng-model="workemail" placeholder="workEmail@work.com" required>
 	    </div>
 	  </div>
 	  <div class="row">
-	    <div class="col-md-12">
-	      <textarea class="form-control new-contact" id="notes" placeholder="contact notes"></textarea>
+	    <div class="col-md-4 col-md-offset-4">
+	      <textarea class="form-control new-contact" name="notes" ng-model="notes" placeholder="contact notes"></textarea>
 	    </div>
 	  </div>
 	  <div class="row">
-	    <div class="col-md-6 mb-3">
+	    <div class="col-md-2 col-md-offset-4 mb-3">
 	      <button class="btn btn-default" id="addContact">Add Contact</Button>
 	    </div>
-	    <div class="col-md-6 mb-3">
+	    <div class="col-md-2 mb-3">
 	      <button class="btn btn-danger" type="reset" id="clearConcact" ng-click="clearForm()">Clear Form</Button>
 	    </div>
 	  </div>

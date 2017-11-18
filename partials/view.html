@@ -2,4 +2,23 @@
 	<h1>View Contacts</h1>
 	{{controller}}
 
+<div id="contacts">
+	<div ng-repeat="contact in contacts" class="col-md-6">
+	    <div class="thumbnail">
+	    	<button class="btn btn-default delete" ng-click="deleteMyContact(contact.id)"><i class="fa fa-trash-o"></i></button>
+		    <div class="contact-info">
+		    	<h3>{{contact.firstName}} {{contact.lastName}} </h3>
+		    	<p>Home Phone: {{contact.phoneHome}}</p>
+		    	<p>Home Phone: {{contact.phoneHome}}</p>
+		    	<p>Home Email: {{contact.emailHome}}</p>
+		    	<p>Work Email: {{contact.emailWork}}</p>
+		        <p>Notes:  {{contact.notes}}</p>
+
+		    </div>
+     	</div>
+	</div>
+</div>
+
+
+
 </div>
