@@ -20,7 +20,7 @@ app.service("ContactService", function($http, $q, FIREBASE_CONFIG) {
 
 
 const postNewContact = (newContact) => { // firebase returns id when post is successfull
-	return $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`);
+	return $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify(newContact));
 };
 
 
