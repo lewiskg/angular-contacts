@@ -2,7 +2,7 @@
 
 app.controller("ViewCtrl", function($rootScope, $scope, ContactService){
 	$scope.controller = "Hello, ViewCtrl. Route:/contacts/view";
-	console.log("Hello, NewCtrl. Route:/contacts/view");
+	// console.log("Hello, NewCtrl. Route:/contacts/view");
 
 	$scope.contacts = [];
 
@@ -18,7 +18,7 @@ app.controller("ViewCtrl", function($rootScope, $scope, ContactService){
 
 	$scope.deleteMyContact = (contactId) => {
 		ContactService.deleteContact(contactId).then((results) => {
-			console.log("results", results);
+			// console.log("results", results);
 			getMyContacts();
 		}).catch((err) => {
 			console.log("error in deleteMyContacts", err);

@@ -25,7 +25,7 @@ const postNewContact = (newContact) => { // firebase returns id when post is suc
 
 
 const deleteContact = (contactId) => { // firebase returns null when delete is successfull
-	console.log("in deleteContact, contactId", contactId);
+	// console.log("in deleteContact, contactId", contactId);
 	return $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
 };
 
