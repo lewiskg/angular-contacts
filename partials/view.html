@@ -13,7 +13,9 @@
 		    	<p>Home Email: {{contact.emailHome}}</p>
 		    	<p>Work Email: {{contact.emailWork}}</p>
 		        <p>Notes:  {{contact.notes}}</p>
-
+		        <p>Rating: 
+              		<star-rating-comp rating="movie.rating" size="'large'" num-of-stars="5" on-click="starChange($event,movie)"></star-rating-comp>
+            	</p>
 		    </div>
      	</div>
 	</div>
