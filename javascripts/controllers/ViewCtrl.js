@@ -33,8 +33,10 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactServic
 		});
 	};
 
-	$scope.contactDetails = (contactId) => {
-    	$location.path(`/contact/detal/${contactId}`);
+	$scope.editContact = (contactToEdit) => {
+    	$rootScope.contactToEdit = contactToEdit;
+    	$rootScope.flag = true;
+    	$location.path(`/contacts/edit/${contactToEdit.id}`);
   	};
 
 	getMyContacts();

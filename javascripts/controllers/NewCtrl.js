@@ -1,22 +1,19 @@
 'use strict';
 
 app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService) {
-	$scope.controller = "Hello, NewCtrl. Route:/contacts/new";
+	if($rootScope.flag) {
+		$scope.controller = "Hello, NewCtrl. Route:/contacts/edit";
+	} else {
+		$scope.controller = "Hello, NewCtrl. Route:/contacts/new";
+	}
 	// console.log("Hello, NewCtrl. Route:/contacts/new");
 
+	// $scope.contact = {};
 
-	// const createContact = (contact) => {
-	// 	return {
-	// 		"firstName": contact.firstName,
-	// 		"lastName":  contact.lastName,
-	// 		"phoneHome": contact.phoneHome,
-	// 		"phoneWork": contact.phoneWork,
-	// 		"emailHome": contact.emailHome,
-	// 		"emailWork": contact.emailWork,
-	// 		"notes":	 contact.notes,
-	// 		"uid": $rootScope.uid
-	// 	};
-	// };
+
+	const fillForm = (contactToEdit) => {
+		$scope.contact = contactToEdit;
+	};
 
 	$scope.saveContact = (contact) => {
 		contact.uid = $rootScope.uid;
@@ -29,7 +26,6 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
 		});
 	};
 
-
 	$scope.reset = function() {
 		for (let key in $scope.contact) {  
 	    	$scope.contact[key] = null;
@@ -39,11 +35,24 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
 	    $scope.formNewContact.$setUntouched();
  	};
 
- // 	$scope.isFormValid = function(){
-	//     if ($scope.formNewContact.$invalid || $scope.formNewContact.$prestine) {
-	//     	console.log("in isFormValid", $scope.formNewContact.$valid);
-	//         return true;
-	//     }
-	// };
+ 	const editContacts = () => {
+ 		if ($rootScope.contactToEdit) {
+
+ 			fillForm($rootScope.contactToEdit);
+ 			$rootScope.contactToEdit = null;
+ 			// $rootScope.flag = false;
+
+ 		}
+ 	};
+
+ 	$scope.updateContact = (contact) => {
+ 		ContactService.putContact(contact).then(() => {
+			$location.path('/contacts/view');
+		}).catch((err) => {
+			console.log("error in updateContact", err);
+		});
+ 	};
+
+ 	editContacts();
 
 });
