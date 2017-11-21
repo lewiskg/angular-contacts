@@ -29,4 +29,10 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
 	};
 
 
+	$scope.reset = function() {
+	    $scope.formNewContact.$setPristine();
+	    $scope.formNewContact.$setUntouched();
+ 	};
+
+
 });
