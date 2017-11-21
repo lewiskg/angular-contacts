@@ -5,7 +5,8 @@
 <div id="contacts">
 	<div ng-repeat="contact in contacts" class="col-md-6">
 	    <div class="thumbnail">
-	    	<button class="btn btn-default delete" ng-click="deleteMyContact(contact.id)"><i class="fa fa-trash-o"></i></button>
+	    	<button class="btn btn-default detail" ng-click="contactDetails(contact.id)"><i class="fa fa-pencil"></i></button>
+	    	<button class="btn btn-default delete" ng-click="deleteMyContact(contact.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 		    <div class="contact-info">
 		    	<h3>{{contact.firstName}} {{contact.lastName}} </h3>
 		    	<p>Home Phone: {{contact.phoneHome}}</p>
@@ -14,7 +15,7 @@
 		    	<p>Work Email: {{contact.emailWork}}</p>
 		        <p>Notes:  {{contact.notes}}</p>
 		        <p>Rating: 
-              		<star-rating-comp rating="movie.rating" size="'large'" num-of-stars="5" on-click="starChange($event,movie)"></star-rating-comp>
+              		<star-rating-comp rating="contact.rating" size="'large'" num-of-stars="5" on-click="starChange($event,contact)"></star-rating-comp>
             	</p>
 		    </div>
      	</div>

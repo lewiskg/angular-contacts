@@ -20,6 +20,7 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
 
 	$scope.saveContact = (contact) => {
 		contact.uid = $rootScope.uid;
+		contact.rating = 0;
 		// console.log(contact);			
 		ContactService.postNewContact(contact).then(() => {
 			$location.path('/contacts/view');
@@ -38,11 +39,11 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
 	    $scope.formNewContact.$setUntouched();
  	};
 
- 	$scope.isFormValid = function(){
-	    if ($scope.formNewContact.$invalid || $scope.formNewContact.$prestine) {
-	    	console.log("in isFormValid", $scope.formNewContact.$valid);
-	        return true;
-	    }
-	};
+ // 	$scope.isFormValid = function(){
+	//     if ($scope.formNewContact.$invalid || $scope.formNewContact.$prestine) {
+	//     	console.log("in isFormValid", $scope.formNewContact.$valid);
+	//         return true;
+	//     }
+	// };
 
 });
