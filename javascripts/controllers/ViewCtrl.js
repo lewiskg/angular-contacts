@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("ViewCtrl", function($rootScope, $scope, ContactService){
+app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactService){
 	$scope.controller = "Hello, ViewCtrl. Route:/contacts/view";
 	// console.log("Hello, NewCtrl. Route:/contacts/view");
 
@@ -14,8 +14,6 @@ app.controller("ViewCtrl", function($rootScope, $scope, ContactService){
 		});
 	};
 
-	getMyContacts();
-
 	$scope.deleteMyContact = (contactId) => {
 		ContactService.deleteContact(contactId).then((results) => {
 			// console.log("results", results);
@@ -25,7 +23,20 @@ app.controller("ViewCtrl", function($rootScope, $scope, ContactService){
 		});
 	};
 
+	$scope.contactFavorite = (contact) => {
+		contact.favorite = !contact.favorite;
+		ContactService.updateContact(contact).then((results) => {
+			// console.log("results", results);
+			getMyContacts();
+		}).catch((err) => {
+			console.log("error in updateContacts", err);
+		});
+	};
 
+	$scope.contactDetails = (contactId) => {
+    	$location.path(`/contact/detal/${contactId}`);
+  	};
 
-
+	getMyContacts();
+	
 });

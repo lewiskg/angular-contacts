@@ -56,9 +56,14 @@ app.config(function($routeProvider){
 		})
 		.when("/contacts/favorites", {
 			templateUrl: 'partials/favorites.html',  
-			controller: 'FavoritesCtrl',
+			controller: 'ViewCtrl',
 			resolve:  {isAuth} // part of ngRouter
 		})
+		.when("/contacts/edit/:id", {
+	      	templateUrl: 'partials/editContact.html',
+	      	controller: 'NewCtrl',
+	      	resolve: {isAuth}
+	    })
 		.otherwise("/login"); 
 
 });

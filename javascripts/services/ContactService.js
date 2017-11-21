@@ -19,15 +19,19 @@ app.service("ContactService", function($http, $q, FIREBASE_CONFIG) {
 	};
 
 
-const postNewContact = (newContact) => { // firebase returns id when post is successfull
-	return $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify(newContact));
-};
+	const updateContact = (existingContact) => { // firebase returns id when post is successfull
+		return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${existingContact.id}.json`, JSON.stringify(existingContact));
+	};
+
+	const postNewContact = (newContact) => { // firebase returns id when post is successfull
+		return $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify(newContact));
+	};
 
 
-const deleteContact = (contactId) => { // firebase returns null when delete is successfull
-	// console.log("in deleteContact, contactId", contactId);
-	return $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
-};
+	const deleteContact = (contactId) => { // firebase returns null when delete is successfull
+		// console.log("in deleteContact, contactId", contactId);
+		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
+	};
 
-	return { getContacts, postNewContact, deleteContact };
+	return { getContacts, postNewContact, deleteContact, updateContact };
 }); 
