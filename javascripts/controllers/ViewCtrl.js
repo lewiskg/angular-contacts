@@ -4,7 +4,7 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactServic
 	// $scope.controller = "Hello, ViewCtrl. Route:/contacts/view";
 	// console.log("Hello, NewCtrl. Route:/contacts/view");
 
-	$scope.contacts = [];
+	// $scope.contacts = [];
 
 	const getMyContacts = () => {	
 		ContactService.getContacts($rootScope.uid).then((results) => {

@@ -4,14 +4,14 @@
 
 
   	<div class="input-group input-group-md col-xs-6 col-xs-offset-3">
-		<span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+		<!-- <span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span> -->
 		<input type="text" class="form-control" placeholder="Search for a contact" ng-model="wordz">
 	</div>
 
 	<br>
 
 	<div id="contacts">
-		<div ng-repeat="contact in contacts" class="col-md-6">
+		<div ng-repeat="contact in contacts | filter:wordz" class="col-md-6">
 		    <div class="thumbnail">
 		    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="contact.favorite"><i class="fa fa-star" aria-hidden="true"></i></button>
 		    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="!contact.favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button>

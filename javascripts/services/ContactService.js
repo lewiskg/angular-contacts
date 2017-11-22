@@ -10,8 +10,9 @@ app.service("ContactService", function($http, $q, FIREBASE_CONFIG) {
 	            // resolve(myContacts);
 	            Object.keys(myContacts).forEach((key) => {
 	                myContacts[key].id = key; 
+	                contacts.push(myContacts[key]);
 	            });
-	            resolve(myContacts);
+	            resolve(contacts);
 	    	}).catch((err) => {
 	    		reject(err);
 	    	});
