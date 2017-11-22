@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactService){
-	$scope.controller = "Hello, ViewCtrl. Route:/contacts/view";
+	// $scope.controller = "Hello, ViewCtrl. Route:/contacts/view";
 	// console.log("Hello, NewCtrl. Route:/contacts/view");
 
 	$scope.contacts = [];
@@ -33,13 +33,13 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactServic
 		});
 	};
 
-	$scope.editContact = (contactToEdit) => {
+	$scope.contactEdit = (contactToEdit) => {
     	$rootScope.contactToEdit = contactToEdit;
     	$rootScope.flag = true;
     	$location.path(`/contacts/edit/${contactToEdit.id}`);
   	};
 
-  	$scope.detailContact = (contactToDetails) => {
+  	$scope.contactDetail = (contactToDetails) => {
 		$rootScope.contactToDetails = contactToDetails;
     	$location.path(`/contacts/detail/${contactToDetails.id}`);
   	};

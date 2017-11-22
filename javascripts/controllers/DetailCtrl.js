@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller("DetailCtrl", function($location, $rootScope, $scope, ContactService){
-	$scope.controller = "Hello, DetailCtrl. Route:/contacts/detail/:id";
+	// $scope.controller = "Hello, DetailCtrl. Route:/contacts/detail/:id";
 	// console.log("Hello, DetailCtrl. Route:/contacts/detail:id");
 
 	$scope.contact = $rootScope.contactToDetails;
@@ -23,7 +23,7 @@ app.controller("DetailCtrl", function($location, $rootScope, $scope, ContactServ
 		});
 	};
 
-	$scope.editContact = (contactToEdit) => {
+	$scope.contactEdit = (contactToEdit) => {
     	$rootScope.contactToEdit = contactToEdit;
     	$rootScope.flag = true;
     	$location.path(`/contacts/edit/${contactToEdit.id}`);

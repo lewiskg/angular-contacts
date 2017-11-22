@@ -1,26 +1,34 @@
 <div class="text-center" id="rated">
 	<h1>View Contacts</h1>
-	{{controller}}
+	<!-- {{controller}} -->
 
-<div id="contacts">
-	<div ng-repeat="contact in contacts" class="col-md-6">
-	    <div class="thumbnail">
-	    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="contact.favorite"><i class="fa fa-star" aria-hidden="true"></i></button>
-	    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="!contact.favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button>
-	    	<button class="btn btn-default detail" ng-click="detailContact(contact)"><i class="fa fa-search" aria-hidden="true"></i></button>
-	    	<button class="btn btn-default detail" ng-click="editContact(contact)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-	    	<button class="btn btn-default delete" ng-click="deleteMyContact(contact.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-		    <div class="contact-info">
-		    	<h3>{{contact.firstName}} {{contact.lastName}} </h3>
-		    	<p>Home Phone: {{contact.phoneHome}}</p>
-		    	<p>Home Phone: {{contact.phoneHome}}</p>
-		    	<p>Home Email: {{contact.emailHome}}</p>
-		    	<p>Work Email: {{contact.emailWork}}</p>
-		        <p>Notes:  {{contact.notes}}</p>
-		    </div>
-     	</div>
+
+  	<div class="input-group input-group-md col-xs-6 col-xs-offset-3">
+		<span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+		<input type="text" class="form-control" placeholder="Search for a contact" ng-model="wordz">
 	</div>
-</div>
+
+	<br>
+
+	<div id="contacts">
+		<div ng-repeat="contact in contacts" class="col-md-6">
+		    <div class="thumbnail">
+		    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="contact.favorite"><i class="fa fa-star" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="!contact.favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactDetail(contact)"><i class="fa fa-search" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactEdit(contact)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default delete" ng-click="deleteMyContact(contact.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			    <div class="contact-info">
+			    	<h3>{{contact.firstName}} {{contact.lastName}} </h3>
+			    	<p>Home Phone: {{contact.phoneHome}}</p>
+			    	<p>Home Phone: {{contact.phoneHome}}</p>
+			    	<p>Home Email: {{contact.emailHome}}</p>
+			    	<p>Work Email: {{contact.emailWork}}</p>
+			        <p>Notes:  {{contact.notes}}</p>
+			    </div>
+	     	</div>
+		</div>
+	</div>
 
 
 

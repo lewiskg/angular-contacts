@@ -1,17 +1,17 @@
 'use strict';
 
 app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService) {
-	if($rootScope.flag) {
-		$scope.controller = "Hello, NewCtrl. Route:/contacts/edit/:id";
-		// console.log("Hello, NewCtrl. Route:/contacts/edit/:id");
-	} else {
-		$scope.controller = "Hello, NewCtrl. Route:/contacts/new";
-		// console.log("Hello, NewCtrl. Route:/contacts/new");
-	}
+	// if($rootScope.flag) {
+	// 	$scope.controller = "Hello, NewCtrl. Route:/contacts/edit/:id";
+	// 	// console.log("Hello, NewCtrl. Route:/contacts/edit/:id");
+	// } else {
+	// 	$scope.controller = "Hello, NewCtrl. Route:/contacts/new";
+	// 	// console.log("Hello, NewCtrl. Route:/contacts/new");
+	// }
 
 	$scope.saveContact = (contact) => {
 		contact.uid = $rootScope.uid;
-		contact.rating = 0;
+		contact.favorite = false;
 		ContactService.postNewContact(contact).then(() => {
 			$location.path('/contacts/view');
 		}).catch((err) => {
@@ -27,14 +27,10 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
 	    $scope.formNewContact.$setUntouched();
  	};
 
-	const fillForm = (contactToEdit) => {
-		$scope.contact = contactToEdit;
-
-	};
 
  	const editContacts = () => {
  		if ($rootScope.contactToEdit) {
- 			fillForm($rootScope.contactToEdit);
+ 			$scope.contact = $rootScope.contactToEdit;
  			$rootScope.contactToEdit = null;
  			// $rootScope.flag = false;
  		}
