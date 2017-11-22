@@ -2,4 +2,4 @@
 
 /* globals app: true */
 
-const app = angular.module("ContactsApp", ["ngAnimate", "ngRoute", "ngSanitize", "ngDropdowns"]);
+const app = angular.module("ContactsApp", ["ngAnimate", "ngRoute", "ngSanitize"]);

@@ -7,6 +7,33 @@ body {
 ul {
   list-style: none; }
 
+ul#contact-data {
+  margin: 0;
+  padding: 0; }
+
+ul#contact-data li {
+  width: 100%;
+  position: relative;
+  height: auto; }
+
+.right {
+  position: absolute;
+  right: 0;
+  left: 35%;
+  text-align: left;
+  padding-left: 5px;
+  display: inline-block;
+  overflow-wrap: break; }
+
+.left {
+  position: absolute;
+  right: 70%;
+  left: 0;
+  text-align: right;
+  padding-right: 5px;
+  display: inline-block;
+  height: 10px; }
+
 .formError {
   color: red; }
 
@@ -16,3 +43,10 @@ select[name=degree] {
   width: 249px;
   margin: 6px;
   padding: 12px; }
+
+.thumbnail {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding-top: 10px;
+  box-shadow: 3px 3px 6px -3px black; }

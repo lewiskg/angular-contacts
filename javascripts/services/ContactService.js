@@ -21,7 +21,10 @@ app.service("ContactService", function($http, $q, FIREBASE_CONFIG) {
 
 
 	const putContact = (existingContact) => { // firebase returns id when post is successfull
-		return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${existingContact.id}.json`, JSON.stringify(existingContact));
+		let contactId = existingContact.id;
+		delete existingContact.id;
+		delete existingContact.$$hashKey;
+		return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`, JSON.stringify(existingContact));
 	};
 
 	const postNewContact = (newContact) => { // firebase returns id when post is successfull

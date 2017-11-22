@@ -33,6 +33,16 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactServic
 		});
 	};
 
+	$scope.contactLove = (contact) => {
+		contact.love = !contact.love;
+		ContactService.putContact(contact).then((results) => {
+			// console.log("results", results);
+			getMyContacts();
+		}).catch((err) => {
+			console.log("error in updateContacts", err);
+		});
+	};
+
 	$scope.contactEdit = (contactToEdit) => {
     	$rootScope.contactToEdit = contactToEdit;
     	$rootScope.flag = true;
