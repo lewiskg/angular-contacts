@@ -3,6 +3,7 @@
 		"contact0": {			
 						"firstName": "Sheldon",
 						"lastName": "Cooper",
+						"degree":	"Doctorate",
 						"phoneHome": "555-555-5555",
 						"phoneWork": "555-555-5556",
 						"emailHome": "sheldon.cooper@gmail.com",
@@ -15,6 +16,7 @@
 		"contact1": {	
 						"firstName": "Bernadette",
 						"lastName": "Rostenkowski",
+						"degree":	"Doctorate",
 						"phoneHome": "555-555-5557",
 						"phoneWork": "555-555-5558",
 						"emailHome": "bernadette.rostenkowski@gmail.com",
@@ -26,6 +28,7 @@
 		"contact2": {		
 						"firstName": "Leonard",
 						"lastName": "Hofstadter",
+						"degree":	"Doctorate",
 						"phoneHome": "555-555-5559",
 						"phoneWork": "555-555-5590",
 						"emailHome": "leonard.hofstadter@gmail.com",
@@ -37,6 +40,7 @@
 		"contact3": {		
 						"firstName": "Penny",
 						"lastName": "Hofstadter",
+						"degree":	"Associates in Arts",
 						"phoneHome": "555-555-5545",
 						"phoneWork": "555-555-3450",
 						"emailHome": "penny.hofstadter@gmail.com",
@@ -48,6 +52,7 @@
 		"contact4": {		
 						"firstName": "Amy",
 						"lastName": "Fowler",
+						"degree":	"Doctorate",
 						"phoneHome": "555-555-2345",
 						"phoneWork": "555-555-2250",
 						"emailHome": "amy.f.fowler@gmail.com",
@@ -59,6 +64,7 @@
 		"contact5": {		
 						"firstName": "Raj",
 						"lastName": "Koothrappali",
+						"degree":	"Doctorate",
 						"phoneHome": "555-545-2345",
 						"phoneWork": "555-522-1250",
 						"emailHome": "rkooth@gmail.com",
@@ -70,6 +76,7 @@
 		"contact6": {	
 						"firstName": "Howard",
 						"lastName": "Wolowitz",
+						"degree":	"Masters of Science",
 						"phoneHome": "555-465-2315",
 						"phoneWork": "555-562-1350",
 						"emailHome": "rocketman@gmail.com",
@@ -81,6 +88,7 @@
 		"contact7": {		
 						"firstName": "Barry",
 						"lastName": "Kripke",
+						"degree":	"Doctorate",
 						"phoneHome": "555-565-2775",
 						"phoneWork": "555-556-1255",
 						"emailHome": "bkripke@gmail.com",
@@ -92,6 +100,7 @@
 		"contact8": {		
 						"firstName": "Stuart",
 						"lastName": "Bloom",
+						"degree":	"Associates in Arts",
 						"phoneHome": "555-775-2695",
 						"phoneWork": "555-675-4455",
 						"emailHome": "comicman@gmail.com",
@@ -103,6 +112,7 @@
 		"contact9": {		
 						"firstName": "Leslie",
 						"lastName": "Winkle",
+						"degree":	"Doctorate",
 						"phoneHome": "555-544-2095",
 						"phoneWork": "555-577-1223",
 						"emailHome": "leslie.winkle@gmail.com",

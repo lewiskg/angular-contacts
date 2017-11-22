@@ -43,6 +43,11 @@
 	  	</div>
 	  	<div class="row">
 	    	<div class="col-md-4 col-md-offset-4">
+	      		<select name="degree" ng-options="x for x in degrees" ng-model="contact.degree"></select>
+	    	</div>
+	  	</div>
+	  	<div class="row">
+	    	<div class="col-md-4 col-md-offset-4">
 	      		<textarea class="form-control new-contact" name="notes"  ng-model="contact.notes" placeholder="contact notes"></textarea>
 	    	</div>
 	  	</div>

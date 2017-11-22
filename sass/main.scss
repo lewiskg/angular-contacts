@@ -15,3 +15,11 @@ ul {
 .formError {
 	color: red;
 }
+
+select[name=degree] {
+	color: black;
+	font-weight: normal;
+	width: 249px;
+	margin: 6px;
+	padding: 12px;
+}

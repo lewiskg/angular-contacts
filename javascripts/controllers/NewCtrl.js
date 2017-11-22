@@ -32,7 +32,6 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
  		if ($rootScope.contactToEdit) {
  			$scope.contact = $rootScope.contactToEdit;
  			$rootScope.contactToEdit = null;
- 			// $rootScope.flag = false;
  		}
  	};
 
@@ -46,5 +45,7 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
  	};
 
  	editContacts();
+
+ 	$scope.degrees = ['Doctorate', 'Masters of Science', 'Masters of Arts', 'Bachelor of Science', 'Bachelor of Arts', 'Associates in Arts'];
 
 });
