@@ -25,7 +25,7 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactServic
 
 	$scope.contactFavorite = (contact) => {
 		contact.favorite = !contact.favorite;
-		ContactService.updateContact(contact).then((results) => {
+		ContactService.putContact(contact).then((results) => {
 			// console.log("results", results);
 			getMyContacts();
 		}).catch((err) => {
@@ -38,6 +38,12 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactServic
     	$rootScope.flag = true;
     	$location.path(`/contacts/edit/${contactToEdit.id}`);
   	};
+
+  	$scope.detailContact = (contactToDetails) => {
+		$rootScope.contactToDetails = contactToDetails;
+    	$location.path(`/contacts/detail/${contactToDetails.id}`);
+  	};
+
 
 	getMyContacts();
 	

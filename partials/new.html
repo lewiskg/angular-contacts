@@ -48,7 +48,7 @@
 	  	</div>
 	  	<div class="row">
 	    	<div class="col-md-2 col-md-offset-4 mb-3" ng-if="flag">
-	      		<button class="btn btn-default" id="editContact" ng-click="updateContact(contact)">Edit Contact</Button>
+	      		<button class="btn btn-default" id="editContact" ng-click="updateContact(contact)" ng-disabled="formNewContact.$invalid || formNewContact.$pristine">Edit Contact</Button>
 	    	</div>
 	    	<div class="col-md-2 col-md-offset-4 mb-3" ng-if="!flag">
 	      		<button class="btn btn-default" id="addContact" ng-click="saveContact(contact)" ng-disabled="formNewContact.$invalid || formNewContact.$pristine">Add Contact</Button>
