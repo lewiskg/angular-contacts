@@ -7,4 +7,8 @@ app.controller("NavCtrl", function($location, $rootScope, $scope, $window, AuthS
 		AuthService.logout();
 		$location.path('/login');
 	};
+
+	$scope.setFlag = () => {
+		$rootScope.flag = false;
+	};
 });
