@@ -1,13 +1,14 @@
-<div class="text-center" id="Favorites">
-	<h1>Favorites</h1>
-<!-- 	{{controller}} -->
+<div class="text-center" id="Details">
+	<h1>Details</h1>
+	{{controller}}
 
-	<div id="contacts">
-		<div ng-repeat="contact in contacts" ng-if="contact.favorite" class="col-md-6">
+	<div id="details">
+		<div class="col-md-6">
 		    <div class="thumbnail">
-		    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)"><i class="fa fa-star" aria-hidden="true"></i></button>
-		    	<button class="btn btn-default detail" ng-click="contactDetail(contact)"><i class="fa fa-search" aria-hidden="true"></i></button>
+	    		<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="contact.favorite"><i class="fa fa-star" aria-hidden="true"></i></button>
+	    		<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="!contact.favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button>
 		    	<button class="btn btn-default detail" ng-click="contactEdit(contact)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+		    	<!-- <button class="btn btn-default detail"><i class="fa fa-search" aria-hidden="true"></i></button> -->
 		    	<button class="btn btn-default delete" ng-click="deleteMyContact(contact.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 			    <div class="contact-info">
 			    	<h3>{{contact.firstName}} {{contact.lastName}} </h3>

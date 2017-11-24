@@ -1,26 +1,17 @@
 'use strict';
 
 app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService) {
-	$scope.controller = "Hello, NewCtrl. Route:/contacts/new";
-	// console.log("Hello, NewCtrl. Route:/contacts/new");
-
-
-	// const createContact = (contact) => {
-	// 	return {
-	// 		"firstName": contact.firstName,
-	// 		"lastName":  contact.lastName,
-	// 		"phoneHome": contact.phoneHome,
-	// 		"phoneWork": contact.phoneWork,
-	// 		"emailHome": contact.emailHome,
-	// 		"emailWork": contact.emailWork,
-	// 		"notes":	 contact.notes,
-	// 		"uid": $rootScope.uid
-	// 	};
-	// };
+	// if($rootScope.flag) {
+	// 	$scope.controller = "Hello, NewCtrl. Route:/contacts/edit/:id";
+	// 	// console.log("Hello, NewCtrl. Route:/contacts/edit/:id");
+	// } else {
+	// 	$scope.controller = "Hello, NewCtrl. Route:/contacts/new";
+	// 	// console.log("Hello, NewCtrl. Route:/contacts/new");
+	// }
 
 	$scope.saveContact = (contact) => {
 		contact.uid = $rootScope.uid;
-		// console.log(contact);			
+		contact.favorite = false;
 		ContactService.postNewContact(contact).then(() => {
 			$location.path('/contacts/view');
 		}).catch((err) => {
@@ -28,21 +19,32 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService
 		});
 	};
 
-
 	$scope.reset = function() {
 		for (let key in $scope.contact) {  
 	    	$scope.contact[key] = null;
-	    	// console.log("in reset loop", key, $scope.contact[key]);
 	    }
 	    $scope.formNewContact.$setPristine();
 	    $scope.formNewContact.$setUntouched();
  	};
 
- 	$scope.isFormValid = function(){
-	    if ($scope.formNewContact.$invalid || $scope.formNewContact.$prestine) {
-	    	console.log("in isFormValid", $scope.formNewContact.$valid);
-	        return true;
-	    }
-	};
+
+ 	const editContacts = () => {
+ 		if ($rootScope.contactToEdit) {
+ 			$scope.contact = $rootScope.contactToEdit;
+ 			$rootScope.contactToEdit = null;
+ 			// $rootScope.flag = false;
+ 		}
+ 	};
+
+ 	$scope.updateContact = (contact) => {
+ 		ContactService.putContact(contact).then(() => {
+			$location.path('/contacts/view');
+			$rootScope.flag = false;
+		}).catch((err) => {
+			console.log("error in updateContact", err);
+		});
+ 	};
+
+ 	editContacts();
 
 });
