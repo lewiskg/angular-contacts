@@ -7,7 +7,6 @@ app.service("ContactService", function($http, $q, FIREBASE_CONFIG) {
 	    return $q((resolve, reject) => { // promise needed if further processing of data required before passing along data
 	    	$http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userUid}"`).then((results) => {
 	            let myContacts = results.data;
-	            // resolve(myContacts);
 	            Object.keys(myContacts).forEach((key) => {
 	                myContacts[key].id = key; 
 	                contacts.push(myContacts[key]);

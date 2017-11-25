@@ -1,8 +1,6 @@
 'use strict';
 
 app.controller("DetailCtrl", function($location, $rootScope, $scope, ContactService){
-	// $scope.controller = "Hello, DetailCtrl. Route:/contacts/detail/:id";
-	// console.log("Hello, DetailCtrl. Route:/contacts/detail:id");
 
 	$scope.contact = $rootScope.contactToDetails;
 

@@ -1,13 +1,6 @@
 'use strict';
 
 app.controller("NewCtrl", function($location, $rootScope, $scope, ContactService) {
-	// if($rootScope.flag) {
-	// 	$scope.controller = "Hello, NewCtrl. Route:/contacts/edit/:id";
-	// 	// console.log("Hello, NewCtrl. Route:/contacts/edit/:id");
-	// } else {
-	// 	$scope.controller = "Hello, NewCtrl. Route:/contacts/new";
-	// 	// console.log("Hello, NewCtrl. Route:/contacts/new");
-	// }
 
 	$scope.saveContact = (contact) => {
 		contact.uid = $rootScope.uid;
