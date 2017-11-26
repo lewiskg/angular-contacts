@@ -7,11 +7,11 @@ app.service("ContactService", function($http, $q, FIREBASE_CONFIG) {
 	    return $q((resolve, reject) => { // promise needed if further processing of data required before passing along data
 	    	$http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userUid}"`).then((results) => {
 	            let myContacts = results.data;
-	            // resolve(myContacts);
 	            Object.keys(myContacts).forEach((key) => {
 	                myContacts[key].id = key; 
+	                contacts.push(myContacts[key]);
 	            });
-	            resolve(myContacts);
+	            resolve(contacts);
 	    	}).catch((err) => {
 	    		reject(err);
 	    	});
@@ -20,7 +20,10 @@ app.service("ContactService", function($http, $q, FIREBASE_CONFIG) {
 
 
 	const putContact = (existingContact) => { // firebase returns id when post is successfull
-		return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${existingContact.id}.json`, JSON.stringify(existingContact));
+		let contactId = existingContact.id;
+		delete existingContact.id;
+		delete existingContact.$$hashKey;
+		return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`, JSON.stringify(existingContact));
 	};
 
 	const postNewContact = (newContact) => { // firebase returns id when post is successfull

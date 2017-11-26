@@ -1,15 +1,16 @@
 <div class="text-center" id="Details">
 	<h1>Details</h1>
-	{{controller}}
 
 	<div id="details">
 		<div class="col-md-6">
 		    <div class="thumbnail">
-	    		<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="contact.favorite"><i class="fa fa-star" aria-hidden="true"></i></button>
-	    		<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="!contact.favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="contact.favorite"><i class="fa fa-star" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactFavorite(contact)" ng-if="!contact.favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactDetail(contact)"><i class="fa fa-search" aria-hidden="true"></i></button>
 		    	<button class="btn btn-default detail" ng-click="contactEdit(contact)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-		    	<!-- <button class="btn btn-default detail"><i class="fa fa-search" aria-hidden="true"></i></button> -->
 		    	<button class="btn btn-default delete" ng-click="deleteMyContact(contact.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactLove(contact)" ng-if="contact.love"><i class="fa fa-heart" aria-hidden="true"></i></button>
+		    	<button class="btn btn-default detail" ng-click="contactLove(contact)" ng-if="!contact.love"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
 			    <div class="contact-info">
 			    	<h3>{{contact.firstName}} {{contact.lastName}} </h3>
 			    	<p>Home Phone: {{contact.phoneHome}}</p>

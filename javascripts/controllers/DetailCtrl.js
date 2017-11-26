@@ -1,8 +1,6 @@
 'use strict';
 
 app.controller("DetailCtrl", function($location, $rootScope, $scope, ContactService){
-	// $scope.controller = "Hello, DetailCtrl. Route:/contacts/detail/:id";
-	// console.log("Hello, DetailCtrl. Route:/contacts/detail:id");
 
 	$scope.contact = $rootScope.contactToDetails;
 
@@ -17,7 +15,14 @@ app.controller("DetailCtrl", function($location, $rootScope, $scope, ContactServ
 	$scope.contactFavorite = (contact) => {
 		contact.favorite = !contact.favorite;
 		ContactService.putContact(contact).then((results) => {
-    	$location.path(`/contacts/favorites`);
+		}).catch((err) => {
+			console.log("error in updateContacts", err);
+		});
+	};
+
+	$scope.contactLove = (contact) => {
+		contact.love = !contact.love;
+		ContactService.putContact(contact).then((results) => {
 		}).catch((err) => {
 			console.log("error in updateContacts", err);
 		});

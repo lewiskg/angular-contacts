@@ -2,8 +2,6 @@
 	<h1 ng-if="flag">Edit Contacts Form</h1>
 	<h1 ng-if="!flag">New Contacts Form</h1>
 
-	<!-- {{controller}} -->
-
 	<form name="formNewContact" novalidate >
 	 	<div class="row">
 	    	<div class="col-md-4 col-md-offset-4 mb-3">
@@ -39,6 +37,11 @@
 	    	<div class="col-md-4 col-md-offset-4 mb-3">
 	      		<input type="text" class="form-control new-contact" name="emailWork"  ng-model="contact.emailWork" placeholder="workEmail@work.com" ng-pattern="/^(?:\d{10}|\w+@\w+\.\w{2,3})$/" required>
 	      		<span class="formError" ng-show="formNewContact.emailWork.$touched && formNewContact.emailWork.$invalid">Work email is required.</span>
+	    	</div>
+	  	</div>
+	  	<div class="row">
+	    	<div class="col-md-4 col-md-offset-4">
+	      		<select name="degree" ng-options="x for x in degrees" ng-model="contact.degree"></select>
 	    	</div>
 	  	</div>
 	  	<div class="row">
